@@ -1,0 +1,38 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 29
+
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    // Cling library
+    api 'org.fourthline.cling:cling-core:2.1.1'
+    api 'org.fourthline.cling:cling-support:2.1.1'
+    // Jetty library
+    api 'org.eclipse.jetty:jetty-server:8.1.21.v20160908'
+    api 'org.eclipse.jetty:jetty-servlet:8.1.21.v20160908'
+    api 'org.eclipse.jetty:jetty-client:8.1.21.v20160908'
+
+    compileOnly 'com.wj.libs:wjEventBus:1.1.1'
+}

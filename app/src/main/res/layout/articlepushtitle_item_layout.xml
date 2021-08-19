@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+<!--    <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="80dp"-->
+<!--            android:text="广告"/>-->
+    <TextView
+            android:id="@+id/push_title"
+            android:layout_width="match_parent"
+            android:text="@string/morePush"
+            android:gravity="center_vertical"
+            android:padding="@dimen/ten"
+            android:background="@color/white"
+            android:layout_height="wrap_content"/>
+    <View style="@style/div"/>
+</LinearLayout>

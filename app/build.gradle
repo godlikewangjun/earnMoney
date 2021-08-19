@@ -1,0 +1,144 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.wj.makebai"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 44
+        versionName "v1.5.7"
+        multiDexEnabled true
+        flavorDimensions "versionCode"
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi-v7a'//, "x86",'armeabi-v7a'
+        }
+        packagingOptions {
+            doNotStrip "*/armeabi-v7a/*.so"
+            doNotStrip "*/x86/*.so"
+            doNotStrip "*/arm64-v8a/*.so"
+            doNotStrip "*/x86_64/*.so"
+            doNotStrip "armeabi.so"
+        }
+    }
+
+    signingConfigs {
+        makebei {
+            storeFile file("../wj.jks")
+            storePassword "12312adasd!"
+            keyAlias "makebei"
+            keyPassword "12312adasd!"
+
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), '../commonlib/common_rules.pro', 'proguard-rules.pro'
+            signingConfig signingConfigs.makebei
+        }
+        debug {
+            debuggable true
+            minifyEnabled true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), '../commonlib/common_rules.pro', 'proguard-rules.pro'
+            signingConfig signingConfigs.makebei
+        }
+    }
+    android.applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.contains('release')) {
+                //获取每个打包产物
+//                def variantProd = variant.productFlavors[0]
+                def fileName = "攒呗_${defaultConfig.versionName}_${defaultConfig.versionCode}_${variant.name}.apk"
+                outputFileName = fileName
+                outputFile.parentFile.absolutePath + File.separator + fileName
+            }
+        }
+    }
+    allprojects {
+        repositories {
+            flatDir { dirs 'libs' }
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    //指定jdk版本
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    dexOptions {//dex配置
+        javaMaxHeapSize "2g"
+
+        preDexLibraries = false
+        additionalParameters = ['--multi-dex',
+                                '--main-dex-list=' + project.rootDir.absolutePath + '/maindexlist.txt',
+                                '--minimal-main-dex',
+                                '--set-max-idx-number=50000']
+    }
+    //必须添加，不加会报错 投屏
+    packagingOptions {
+        exclude 'META-INF/beans.xml'
+    }
+    sourceSets {
+        main {
+            res.srcDirs = ['src/main/res', 'src/main/res-night']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    api project(':commonlib')
+    implementation project(':lib_screen')
+    implementation project(':play')
+    implementation project(':danmukulight')
+//    api project(':client')
+    /**检测内存泄漏*/
+//    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.0-beta-3'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+//    debugImplementation 'cat.ereza:customactivityoncrash:2.3.0'//崩溃检查
+//    releaseCompileOnly 'cat.ereza:customactivityoncrash:2.3.0'//崩溃检查
+    implementation 'com.youth.banner:banner:2.1.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.github.Yalantis:Context-Menu.Android:1.1.4'
+    /**点赞的效果*/
+    implementation 'com.sum.slike:library:0.2.1'
+    /**视频播放*/
+    implementation 'com.shuyu:GSYVideoPlayer:8.0.0'
+    /**修改状态栏*/
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+    /**二维码扫描识别*/
+    implementation project(path: ':zbarlibary')
+//    /**悬浮窗*/
+//    implementation 'com.github.yhaolpz:FloatWindow:1.0.9'
+    /**保活app进程*/
+    implementation 'com.fanjun:keeplive:1.1.20'
+    /**爬虫框架 解决资源问题*/
+    implementation 'org.jsoup:jsoup:1.13.1'
+//    implementation 'com.tencent.imsdk:tuikit:4.7.10'
+    implementation 'com.zzhoujay.richtext:richtext:3.0.8'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    //引用room
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+}

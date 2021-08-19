@@ -1,0 +1,3 @@
+include ':danmukulight'
+include ':play'
+include ':app', ':commonlib', ':zbarlibary', ':umshare', ':lib_screen'

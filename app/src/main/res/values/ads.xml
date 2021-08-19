@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="loading">loading</string>
+    <string name="home_banner">homebanner</string>
+    <string name="home_top">homeTop</string>
+</resources>

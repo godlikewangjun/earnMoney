@@ -1,0 +1,31 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.wj.umshare">
+
+    <application>
+
+        <activity
+                android:name="com.wj.makebai.wxapi.WXEntryActivity"
+                android:configChanges="keyboardHidden|orientation|screenSize"
+                android:exported="true"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+                android:name="com.tencent.tauth.AuthActivity"
+                android:launchMode="singleTask"
+                android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.tencent.connect.common.AssistActivity"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                android:configChanges="orientation|keyboardHidden|screenSize"/>
+    </application>
+
+</manifest>

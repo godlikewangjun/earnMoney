@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/noData_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/noData_finish"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:padding="@dimen/ten"
+            android:src="@drawable/ic_back2" />
+
+        <View
+            style="@style/div"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/imgView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="180dp"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="loading.json"
+        app:lottie_loop="true" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ten"
+        android:textColor="@color/text"
+        android:textSize="@dimen/title" />
+
+    <TextView
+        android:id="@+id/refresh"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/ten"
+        android:background="@drawable/shape_yellow_btn"
+        android:gravity="center"
+        android:text="@string/refresh"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/go_fund"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/ten"
+        android:background="@drawable/shape_yellow_btn"
+        android:gravity="center"
+        android:text="@string/more_task"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#dedede</color>
+    <color name="colorAccent">#B98E09</color>
+
+    <color name="white_back">#131313</color>
+
+    <color name="white">#272727</color>
+    <color name="black">#E0DDDD</color>
+    <color name="gray">#ADADAD</color>
+    <color name="div">#424242</color>
+    <color name="div1">#A8A7A7</color>
+    <color name="text">#EBC183</color>
+    <color name="text_gray">#BDBABA</color>
+    <color name="red">#CA1A1A</color>
+
+    <color name="yellow1">#393838</color>
+
+    <!--svg-->
+    <color name="svg_dark">#ffffff</color>
+    <color name="svg_yellow">#F5C32B</color>
+</resources>

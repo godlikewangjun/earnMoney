@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <com.wj.makebai.ui.weight.GradientView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    <FrameLayout
+            android:id="@+id/bannerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"/>
+    <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/imgView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="wave.json"
+            app:lottie_loop="true" />
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发现好玩"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_margin="20dp"/>
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_found"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/ten"
+                android:layout_marginLeft="@dimen/ten"/>
+    </LinearLayout>
+
+    <com.wj.makebai.ui.weight.NoData
+            android:id="@+id/noData"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+</FrameLayout>

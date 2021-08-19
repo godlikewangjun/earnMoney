@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--    <com.scwang.smartrefresh.layout.SmartRefreshLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            app:srlHeaderHeight="150dp"-->
+    <!--            app:srlHeaderMaxDragRate="1">-->
+
+    <!--        <TextView-->
+    <!--                android:id="@+id/header"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:background="#555"-->
+    <!--                android:gravity="center_horizontal"-->
+    <!--                android:lineSpacingExtra="5dp"-->
+    <!--                android:padding="20dp"-->
+    <!--                android:text="@string/app_name"-->
+    <!--                android:textColor="#aaa"-->
+    <!--                android:textSize="16sp"-->
+    <!--                app:layout_srlBackgroundColor="#555"-->
+    <!--                app:layout_srlSpinnerStyle="FixedBehind" />-->
+
+    <!--        <com.abase.view.weight.X5WebView-->
+    <!--                android:id="@+id/webView"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:orientation="vertical" />-->
+    <!--    </com.scwang.smartrefresh.layout.SmartRefreshLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/express_ad_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five"
+            android:layout_marginBottom="@dimen/five"
+            android:background="@drawable/line" />
+
+        <com.abase.view.weight.X5WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progress_horizontal"
+        style="@style/progressBarHorizontal_indeter"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:max="100" />
+
+    <com.wj.makebai.ui.weight.NoData
+        android:id="@+id/nodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+</FrameLayout>

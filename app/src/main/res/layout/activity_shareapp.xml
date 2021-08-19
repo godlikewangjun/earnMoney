@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+        android:orientation="vertical">
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/blue1">
+
+        <TextView
+                android:id="@+id/tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="@string/shareTips"
+                android:textColor="@color/white"
+                android:textSize="@dimen/bar_title" />
+    </FrameLayout>
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="40dp"
+                app:cardCornerRadius="@dimen/ten"
+                app:cardElevation="5dp">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                        <TextView
+                                android:id="@+id/share_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/black"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/five"
+                                android:text="@string/sharePerson"
+                                android:textColor="@color/text_gray"
+                                android:textSize="@dimen/small_text" />
+                    </LinearLayout>
+
+                    <View
+                            android:layout_width="1dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="@dimen/ten"
+                            android:background="@color/div" />
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                        <TextView
+                                android:id="@+id/share_points"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/black"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/five"
+                                android:text="@string/sharePoints"
+                                android:textColor="@color/text_gray"
+                                android:textSize="@dimen/small_text" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                        style="@style/div"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp" />
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/shape_div_back"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/ten"
+                            android:text="@string/shareCode" />
+
+                    <TextView
+                            android:id="@+id/user_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/shareNoneCode"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/bar_title" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/copy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_share_copy"
+                            android:text="@string/copy"
+                            android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/shape_div_line"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                    <View
+                            android:layout_width="2dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="20dp"
+                            android:background="#ff9ea5ff" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/user_bind_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:gravity="left|center_vertical"
+                            android:hint="@string/inputCode"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/bind"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_share_bind"
+                            android:text="@string/bind"
+                            android:textColor="@color/white" />
+                </LinearLayout>
+
+                <ImageView
+                        android:id="@+id/scan_logo"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="40dp" />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ten"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/text_gray"
+                        android:text="@string/shareCanSave" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/share"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="30dp"
+                        android:background="@drawable/shape_btn_share"
+                        android:text="@string/share"
+                        android:textColor="@color/white" />
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

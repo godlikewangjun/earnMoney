@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+    <View
+            android:layout_width="2dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@color/red" />
+
+    <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="@string/my_cahnnel"
+            android:textColor="@color/text_gray"
+            android:textSize="16sp" />
+
+
+    <TextView
+            android:id="@+id/tv_btn_edit"
+            android:layout_width="56dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="@string/edit"
+            android:textColor="@color/red"
+            android:textSize="13sp" />
+
+</RelativeLayout>

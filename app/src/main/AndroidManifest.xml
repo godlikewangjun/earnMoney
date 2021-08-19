@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.wj.makebai">
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <!--保存资源到SD卡-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!--解决强制https usesCleartextTraffic-->
+    <application
+        android:name=".app.MyApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:launchMode="singleTask"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:overrideLibrary="com.shuyu.gsyvideoplayer.lib"
+        tools:replace="android:name,android:allowBackup, android:label"
+        tools:targetApi="m">
+        <activity
+            android:name=".ui.activity.PermissionCheckActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSplash"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!--要想在别的App上能成功调起App，必须添加intent过滤器-->
+            <intent-filter>
+                <!--协议部分，随便设置-->
+                <data
+                    android:host="detail"
+                    android:scheme="jzzb.info" />
+                <!--下面这几行也必须得设置-->
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".ui.activity.article.ArticleDetailActivity" />
+        <activity
+            android:name=".ui.activity.comm.SearchActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name=".ui.activity.video.MovieActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.activity.comic.ComicDetailActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".ui.activity.comic.WatchComicActivity" />
+        <activity
+            android:name=".ui.activity.novel.NovelListActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".ui.activity.novel.NovelDetailActivity" />
+        <activity android:name=".ui.activity.novel.WatchNovelActivity" />
+        <activity
+            android:name=".ui.activity.user.LoginActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.activity.appTask.GameTaskActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.activity.article.ChannelArticleActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.activity.article.ChannelActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.activity.comm.QrResultActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.activity.appTask.VideoTaskActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".ui.activity.user.SetActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.user.AboutActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.user.StoreActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.comm.CustomerServiceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.appTask.AppListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.comm.SignActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.comm.WelfareActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.comm.ExchangeSuccessActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.appTask.EarnTaskActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.article.UcChannelActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.article.UcPdActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.user.RegisterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.user.FindPwdActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.comm.MessageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.comm.AuditListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <!--要想在别的App上能成功调起App，必须添加intent过滤器-->
+            <intent-filter>
+                <!--协议部分，随便设置-->
+                <data
+                    android:host="audit_list"
+                    android:scheme="jzzb.info" />
+                <!--下面这几行也必须得设置-->
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.comm.ExchangeActivity" />
+        <activity
+            android:name=".ui.activity.shortscut.ScanActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTranslucent" />
+        <activity
+            android:name=".ui.activity.comm.ShareAppActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.activity.user.UserSetActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.comm.LuckPanActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.comm.LuckyRecodeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.user.PaymentDetailsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.comm.HasBindListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.appTask.TaskDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- 1110001111，如果你使用的公用账号，则不需要修改；否则修改成你在QQ开放平台申请的 APP ID -->
+                <data android:scheme="tencent101811340" />
+            </intent-filter>
+        </activity>
+        <!-- 腾讯视频播放页面-->
+        <activity
+            android:name="com.tencent.smtt.sdk.VideoActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="com.tencent.smtt.tbs.video.PLAY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!--腾讯广告 -->
+        <provider
+            android:name="com.wj.im.utils.TencentFileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/gdt_file_path" />
+        </provider>
+
+        <activity
+            android:name=".ui.activity.parsing.VipMovieActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden">
+            <!--要想在别的App上能成功调起App，必须添加intent过滤器-->
+            <intent-filter>
+                <!--协议部分，随便设置-->
+                <data
+                    android:host="vip_movie"
+                    android:scheme="jzzb.info" />
+                <!--下面这几行也必须得设置-->
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.parsing.VipMovieDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.activity.parsing.VipActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.activity.video.MovieDetailActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".ui.activity.comic.ComicListActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name=".ui.activity.comm.WebActivity"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.zip.ImageZipActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.comm.MoreActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!--渠道号-->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="debug" />
+        <!--错误页面-->
+        <activity
+            android:name=".ui.activity.comm.CustomErrorActivity"
+            android:process=":error_activity" />
+        <activity
+            android:name=".ui.activity.appTask.TaskStateListActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.activity.user.BindPhoneActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.activity.user.BindWeChatActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.activity.appTask.SearchTaskActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.activity.bbs.BBSActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.activity.user.VipCenterActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.activity.user.PayActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.activity.novel.SearchNovelActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.activity.comic.SearchComicActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.activity.parsing.SearchVipMovieActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:launchMode="singleTask" />
+        <!--bugly-->
+        <activity android:name="com.wj.commonlib.ui.UpgradeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+
+        <!--高德定位-->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="660368a8b96f063494f1f10e1057cdae" />
+        <service android:name="com.amap.api.location.APSService" />
+
+
+        <meta-data
+            android:name="com.wj.makebai.utils.MyGlideModule"
+            android:value="AppGlideModule" />
+    </application>
+
+</manifest>

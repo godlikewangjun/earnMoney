@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- This is the line -->
+    <item
+            android:left="8dp"
+            android:right="8dp">
+        <shape>
+            <solid
+                    android:width="1px"
+                    android:color="@color/div" />
+        </shape>
+
+    </item>
+    <item android:bottom="1px">
+        <ripple  android:color="@color/div">
+            <item>
+                <shape>
+                    <!--点击后的颜色-->
+                    <solid android:color="@color/white"/>
+                </shape>
+            </item>
+        </ripple>
+    </item>
+</layer-list>

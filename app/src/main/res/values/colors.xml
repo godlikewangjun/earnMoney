@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F59018</color>
+    <color name="colorPrimaryDark">#dedede</color>
+    <color name="colorAccent">#0EBBD1</color>
+    <color name="white_back">#FFFDFD</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="black_">#90000000</color>
+    <color name="text_white">#D1D0D0</color>
+    <color name="gray">#ADADAD</color>
+    <color name="div">#DDDDDD</color>
+    <color name="div1">#f5f6f7</color>
+    <color name="text">#333333</color>
+    <color name="text1">#565656</color>
+    <color name="text_gray">#666666</color>
+    <color name="red">#CA1A1A</color>
+    <color name="red1">#FC4D4D</color>
+    <color name="yellow">#E79319</color>
+    <color name="yellow1">#F59018</color>
+    <color name="yellow2">#FEC81F</color>
+    <color name="yellow3">#ECE6D3</color>
+    <color name="green">#20AFA2</color>
+    <color name="green1">#12867C</color>
+    <color name="green2">#03AA99</color>
+    <color name="orange">#DE6014</color>
+    <color name="orange1">#FF5D44</color>
+    <color name="blue">#3D92FE</color>
+    <color name="blue1">#3E4BFF</color>
+    <color name="blue2">#1F0B41</color>
+    <color name="blue3">#5C42D2</color>
+    <color name="text_gray1">#777777</color>
+
+
+    <color name="gold">#9e8358</color>
+    <color name="gold1">#F4D6B8</color>
+    <color name="gold2">#EAC988</color>
+
+    <!--svg-->
+    <color name="svg_dark">#2A2B2B</color>
+    <color name="svg_yellow">#FFCD36</color>
+
+    <!--read-->
+    <color name="read_menu_bg">#1D1B1B</color>
+    <color name="read_menu_text">#CBCBCB</color>
+
+    <color name="read_bg_default">#CEC29C</color>
+    <color name="read_bg_1">#CCEBCC</color>
+    <color name="read_bg_2">#37342F</color>
+    <color name="read_bg_3">#D1CEC5</color>
+    <color name="read_bg_4">#001C27</color>
+
+    <dimen name="read_text_bottom">12dp</dimen>
+</resources>

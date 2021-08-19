@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ten">
+
+        <include
+                layout="@layout/include_search_layout"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/five"
+                android:layout_marginRight="70dp"
+                android:layout_marginBottom="@dimen/five"
+                android:transitionName="search_bar" />
+
+        <TextView
+                android:id="@+id/btn_cancel"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center_vertical"
+                android:gravity="center"
+                android:layout_margin="@dimen/five"
+                android:text="@string/cancel"
+                android:textColor="@color/text_gray" />
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/search_history"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+    </FrameLayout>
+
+</LinearLayout>

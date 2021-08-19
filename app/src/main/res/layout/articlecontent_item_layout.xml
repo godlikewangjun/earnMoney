@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <com.abase.view.weight.LoadWeb
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginRight="@dimen/ten"
+            android:background="@color/white"
+            android:minHeight="300dp"
+            android:scrollbars="none" />
+    <TextView
+            android:id="@+id/like_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/ten"
+            android:drawablePadding="@dimen/ten"
+            android:drawableStart="@drawable/ic_favorite_24dp"/>
+</LinearLayout>

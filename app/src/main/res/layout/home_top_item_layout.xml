@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_top"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.youth.banner.Banner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/header_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="5dp"
+        android:gravity="center" />
+
+
+    <View style="@style/div_ten" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/ten">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/best_msg"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/title" />
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/five"
+            android:layout_marginRight="@dimen/five"
+            android:background="@color/green2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/best_gg"
+            android:textColor="@color/green2"
+            android:textSize="@dimen/title" />
+
+        <com.sunfusheng.marqueeview.MarqueeView
+            android:id="@+id/marqueeView"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_weight="1"
+            app:mvAnimDuration="1000"
+            app:mvDirection="bottom_to_top"
+            app:mvInterval="3000"
+            app:mvSingleLine="true"
+            app:mvTextColor="@color/black"
+            app:mvTextSize="14sp" />
+
+        <ImageView
+            android:id="@+id/message_list"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/ten"
+            android:src="@drawable/img_home_jiant" />
+    </LinearLayout>
+
+    <View style="@style/div_ten" />
+    <LinearLayout
+        android:id="@+id/video_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:layout_margin="@dimen/ten">
+        <View
+            android:layout_width="3dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/blue3"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue3"
+            android:layout_marginLeft="4dp"
+            android:text="@string/new_push"
+            android:textSize="@dimen/title" />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp" android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/video_more"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/img_home_jiant"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/video"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/ten"
+        android:layout_marginTop="@dimen/ten"
+        android:layout_marginLeft="@dimen/ten">
+        <View
+            android:layout_width="3dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/red1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red1"
+            android:layout_marginLeft="4dp"
+            android:text="@string/hot_push"
+            android:textSize="@dimen/title" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/ten"
+        android:paddingLeft="@dimen/ten"
+        android:paddingRight="@dimen/ten">
+
+        <FrameLayout
+            android:id="@+id/sign"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/home_item_0">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginTop="20dp"
+                android:text="@string/home_item_0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginTop="45dp"
+                android:text="@string/home_item_0_"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/home_item_more" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/luck_pan"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_weight="1"
+            android:background="@drawable/home_item_1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginTop="20dp"
+                android:text="@string/home_item_1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginTop="45dp"
+                android:text="@string/home_item_1_"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/home_item_more" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/do_video"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_weight="1"
+            android:background="@drawable/home_item_2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginTop="20dp"
+                android:text="@string/home_item_2"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginTop="45dp"
+                android:text="@string/home_item_2_"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/home_item_more" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/go_ad_task"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_margin="@dimen/ten"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        android:src="@drawable/do_task" />
+    <View style="@style/div_ten" android:layout_marginTop="@dimen/ten"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ten">
+        <View
+            android:layout_width="3dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/blue"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:layout_marginLeft="4dp"
+            android:text="@string/app_guide"
+            android:textSize="@dimen/title" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="@dimen/ten"
+        android:layout_marginRight="@dimen/ten"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/user_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/home_item_guide1"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/earn_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/ten"
+            android:background="@drawable/home_item_guide"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <View style="@style/div_ten" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/five"
+        android:layout_marginLeft="@dimen/ten">
+        <View
+            android:layout_width="3dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/green"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:text="@string/beast_news"
+            android:textSize="@dimen/title" />
+        <ImageView
+            android:id="@+id/news_more"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/ten"
+            android:visibility="gone"
+            android:src="@drawable/img_home_jiant"/>
+    </LinearLayout>
+</LinearLayout>

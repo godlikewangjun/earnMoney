@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/div1">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/game_task" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:visibility="gone"
+                app:cardCornerRadius="@dimen/ten"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ten"
+                        android:text="@string/most_price_task"
+                        android:textSize="@dimen/bar_title" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/shape_earn_norm"
+                            android:padding="@dimen/ten"
+                            android:src="@drawable/ic_earn_game" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/earn_game_tip" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/ten"
+                                android:text="@string/earn_game_tip_"
+                                android:textColor="@color/text_gray"
+                                android:textSize="@dimen/small_text" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/ten"
+                                android:text="@string/earn_game_tip1"
+                                android:textColor="@color/yellow2"
+                                android:textSize="@dimen/small_text" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/do_game"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:background="@drawable/shape_earn_norm"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/five"
+                            android:paddingBottom="@dimen/five"
+                            android:text="@string/do_game_task"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/small_text" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/shape_earn_norm"
+                            android:padding="@dimen/ten"
+                            android:src="@drawable/ic_earn_app" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/earn_game_tip2" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/ten"
+                                android:text="@string/earn_game_tip2_"
+                                android:textColor="@color/text_gray"
+                                android:textSize="@dimen/small_text" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/ten"
+                                android:text="@string/earn_game_tip3"
+                                android:textColor="@color/yellow2"
+                                android:textSize="@dimen/small_text" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/do_app"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:background="@drawable/shape_earn_norm"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/five"
+                            android:paddingBottom="@dimen/five"
+                            android:text="@string/do_app_task"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/small_text" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/shape_earn_norm"
+                            android:padding="@dimen/ten"
+                            android:src="@drawable/ic_earn_art" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/read_art_count"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/earn_game_tip4" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/ten"
+                                android:text="@string/earn_game_tip4_"
+                                android:textColor="@color/text_gray"
+                                android:textSize="@dimen/small_text" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/ten"
+                                android:text="@string/earn_game_tip5"
+                                android:textColor="@color/yellow2"
+                                android:textSize="@dimen/small_text" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/do_art"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:background="@drawable/shape_earn_norm"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/five"
+                            android:paddingBottom="@dimen/five"
+                            android:text="@string/do_art_task"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/small_text" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="@dimen/ten">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/norm_task"
+                        android:textSize="@dimen/bar_title" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/shape_earn_day"
+                            android:padding="@dimen/ten"
+                            android:src="@drawable/ic_earn_video" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/video_count"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/earn_game_tip12" />
+
+                            <TextView
+                                android:id="@+id/video_tip"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/ten"
+                                android:text="@string/earn_game_tip12_"
+                                android:textColor="@color/text_gray"
+                                android:textSize="@dimen/small_text" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/ten"
+                                android:text="@string/earn_game_tip13"
+                                android:textColor="@color/yellow2"
+                                android:textSize="@dimen/small_text" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/do_video"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:background="@drawable/shape_earn_day"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/five"
+                            android:paddingBottom="@dimen/five"
+                            android:text="@string/do_video"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/small_text" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/shape_earn_day"
+                            android:padding="@dimen/ten"
+                            android:src="@drawable/ic_earn_sign" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/earn_game_tip6" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/ten"
+                                android:text="@string/earn_game_tip6_"
+                                android:textColor="@color/text_gray"
+                                android:textSize="@dimen/small_text" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/ten"
+                                android:text="@string/earn_game_tip7"
+                                android:textColor="@color/yellow2"
+                                android:textSize="@dimen/small_text" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/do_sign"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:background="@drawable/shape_earn_day"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/five"
+                            android:paddingBottom="@dimen/five"
+                            android:text="@string/do_sign"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/small_text" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/shape_earn_day"
+                            android:padding="@dimen/ten"
+                            android:src="@drawable/ic_earn_cj" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/luck_count"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/earn_game_tip8" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/ten"
+                                android:text="@string/earn_game_tip8_"
+                                android:textColor="@color/text_gray"
+                                android:textSize="@dimen/small_text" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/ten"
+                                android:text="@string/earn_game_tip9"
+                                android:textColor="@color/yellow2"
+                                android:textSize="@dimen/small_text" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/do_luck"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:background="@drawable/shape_earn_day"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/five"
+                            android:paddingBottom="@dimen/five"
+                            android:text="@string/do_cj"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/small_text" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/shape_earn_day"
+                            android:padding="@dimen/ten"
+                            android:src="@drawable/ic_earn_share" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/share_count"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/earn_game_tip10" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/ten"
+                                android:text="@string/earn_game_tip10_"
+                                android:textColor="@color/text_gray"
+                                android:textSize="@dimen/small_text" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/ten"
+                                android:text="@string/earn_game_tip11"
+                                android:textColor="@color/yellow2"
+                                android:textSize="@dimen/small_text" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/do_share"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:background="@drawable/shape_earn_day"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/five"
+                            android:paddingBottom="@dimen/five"
+                            android:text="@string/do_share"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/small_text" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text="@string/earn_list"
+            android:textColor="@color/white"
+            android:textSize="@dimen/bar_title" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_back_w" />
+
+        <TextView
+            android:id="@+id/view1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="@dimen/ten"
+            android:gravity="center"
+            android:text="@string/payment_details"
+            android:textColor="@color/white" />
+    </FrameLayout>
+
+
+</FrameLayout>

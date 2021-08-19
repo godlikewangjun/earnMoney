@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:id="@+id/game"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten"
+            android:orientation="horizontal">
+
+        <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/ten"
+                android:src="@drawable/hot" />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawableRight="@drawable/ic_right"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/ten"
+                android:text="@string/earn_game"
+                android:textSize="@dimen/bar_title" />
+    </LinearLayout>
+
+    <View
+            style="@style/div"
+            android:layout_marginTop="@dimen/ten" />
+
+    <LinearLayout
+            android:id="@+id/online"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten"
+            android:orientation="horizontal">
+
+<!--        <ImageView-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:layout_marginLeft="@dimen/ten"-->
+<!--                android:src="@drawable/online_game" />-->
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawableRight="@drawable/ic_right"
+                android:drawablePadding="@dimen/ten"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/ten"
+                android:text="@string/online_game"
+                android:textSize="@dimen/bar_title" />
+    </LinearLayout>
+
+</LinearLayout>

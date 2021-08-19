@@ -1,0 +1,57 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.4.32'
+//    ext.shadow_version = '1.0.1'
+    repositories {
+        google()
+        jcenter()
+//        maven { url "https://dl.bintray.com/godlikewangjun/sdk" }
+//        maven {
+//            url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/"
+//        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+//        classpath "com.wj.sdk.core:gradle-plugin:$shadow_version"//热更新的插件
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://dl.bintray.com/godlikewangjun/wjAndBase" }
+        maven { url "https://dl.bintray.com/godlikewangjun/sdk" }
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+        maven { url "https://jitpack.io" }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven { url 'http://4thline.org/m2' }//投屏
+    }
+}
+
+ext {
+    compileSdkVersion = 29
+    minSdkVersion = 16
+    targetSdkVersion = 29
+    versionCode = 1
+    versionName = "4.7.10"
+    abiFilters = ['armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'] //['armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64']
+    arguments = "-DANDROID_STL=c++_static"
+    cppFlags = "-std=c++11"
+
+    lifecycleVersion = '2.2.0'
+    pagingVersion = '3.0.0-alpha07'
+
+    room_version = "2.2.6"
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}

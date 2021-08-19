@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/ten">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/top"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/exchange_backgrounbd"
+                android:padding="20dp">
+
+            <TextView
+                    android:id="@+id/view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_points"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/bar_title" />
+
+            <TextView
+                    android:id="@+id/user_points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/bar_title"
+                    app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <Button
+                    android:id="@+id/enter"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="@dimen/ten"
+                    android:background="@drawable/selector_tx"
+                    android:text="@string/exchange_money"
+                    android:textColor="@color/white"
+                    android:enabled="false"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exchange_sale"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                    android:id="@+id/rule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_tips"
+                    android:drawablePadding="@dimen/five"
+                    android:text="@string/rule_tips"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/choose_point"
+                    android:textSize="@dimen/bar_title"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exchange2wechat"
+                    android:textColor="@color/text_gray" />
+        </LinearLayout>
+        <TextView
+                android:id="@+id/welfare_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/small_text"
+                android:layout_marginTop="@dimen/ten"/>
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/five"
+                android:layout_marginBottom="@dimen/ten" />
+
+        <TextView
+                android:id="@+id/view1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exchange_detail"
+                android:textSize="@dimen/bar_title"
+                android:textStyle="bold" />
+
+        <View
+                android:id="@+id/view2"
+                style="@style/div"
+                android:layout_marginTop="@dimen/ten" />
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/bill_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginBottom="@dimen/ten" />
+
+        <TextView
+                android:id="@+id/none_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/bar_title"
+                android:layout_marginTop="40dp"
+                android:visibility="gone"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/none_txsj"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

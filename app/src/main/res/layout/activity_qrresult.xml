@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+            android:id="@+id/qr_text"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="200dp"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/copy"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/copy"
+            android:layout_margin="@dimen/ten"
+            android:textColor="@color/white"
+            android:layout_gravity="center"/>
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/enter"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/browser"
+            android:layout_margin="@dimen/ten"
+            android:textColor="@color/white"
+            android:layout_gravity="center"/>
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/qq_qun"
+            style="@style/user_set"
+            android:padding="@dimen/ten"
+            android:text="@string/qq_qun"
+            android:textColor="@color/text" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/qq_sw"
+            style="@style/user_set"
+            android:padding="@dimen/ten"
+            android:text="@string/qq_sw"
+            android:textColor="@color/text"
+            app:switchPadding="@dimen/ten" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/qq_js"
+            style="@style/user_set"
+            android:padding="@dimen/ten"
+            android:text="@string/qq_js"
+            android:textColor="@color/text"
+            app:switchPadding="@dimen/ten" />
+
+</LinearLayout>

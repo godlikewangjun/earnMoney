@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/luck_back"
+        android:orientation="vertical">
+
+    <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textSize="@dimen/bar_title"
+            android:textStyle="bold"
+            android:layout_marginLeft="100dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/luck_hb"
+            android:layout_marginTop="30dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:textColor="#faeda7"
+            android:text="@string/invite_friends"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/bar_title"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:textColor="#faeda7"
+            android:text="@string/invite_friends1"/>
+    <ImageView
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            android:layout_gravity="center"
+            android:background="@drawable/luck_pan" />
+    <com.wj.makebai.ui.weight.luckpan.LuckPan
+            android:id="@+id/luck_pan"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:padding="@dimen/ten" />
+    <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="60dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="150dp"
+            android:src="@drawable/luck_jb"/>
+    <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginBottom="150dp"
+            android:src="@drawable/luck_jb"/>
+
+    <ImageView
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:rotation="-60"
+            android:src="@drawable/luck_start" />
+    <TextView
+            android:id="@+id/luck_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/bar_title"
+            android:textStyle="bold"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="100dp"
+            android:textColor="#faeda7"
+            android:text="@string/luck_count"/>
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/lucky_recode"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/shape_blue2"
+            android:text="@string/winning_record"
+            android:textColor="@color/white" />
+</FrameLayout>

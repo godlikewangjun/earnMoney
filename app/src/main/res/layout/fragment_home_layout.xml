@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.wj.makebai.ui.weight.TouchRecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"/>
+
+
+    <!--适应全面屏，沉浸式效果-->
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:elevation="1dp">
+
+        <View
+            android:id="@+id/title_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent" />
+
+
+        <LinearLayout
+            android:id="@+id/search_bar"
+            android:layout_width="45dp"
+            android:layout_height="35dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/scan"
+            android:orientation="horizontal"
+            android:background="@drawable/shape_gray"
+            android:transitionName="search_bar">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/ten"
+                android:src="@drawable/ic_search" />
+
+            <TextView
+                android:id="@+id/search_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="@dimen/ten"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/scan"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="@dimen/ten"
+            android:padding="8dp"
+            android:src="@drawable/ic_scan" />
+
+        <View
+            android:id="@+id/title_line"
+            style="@style/div"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/five"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <com.wj.makebai.ui.weight.NoData
+        android:id="@+id/noData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/go_top"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/shape_white_round"
+        android:layout_gravity="right|bottom"
+        android:padding="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/ic_back_top"/>
+</FrameLayout>

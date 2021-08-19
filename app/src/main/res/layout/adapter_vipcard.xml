@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:orientation="vertical"
+    android:background="@drawable/shape_vipcard"
+    android:gravity="center">
+    <TextView
+        android:id="@+id/payMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gold2"
+        android:textSize="@dimen/bar_title"
+        android:text="10元每月"/>
+    <TextView
+        android:id="@+id/payMoney1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/title"/>
+    <TextView
+        android:id="@+id/payTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gold2"
+        android:textSize="@dimen/small_text"
+        android:layout_marginTop="@dimen/five"/>
+</LinearLayout>

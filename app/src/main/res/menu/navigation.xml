@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!--    <item-->
+    <!--            android:id="@+id/navigation_dashboard"-->
+    <!--            android:icon="@drawable/ic_bbs"-->
+    <!--            android:title="@string/message_tab"/>-->
+
+    <item
+        android:id="@+id/navigation_task"
+        android:icon="@drawable/selector_tab_task"
+        android:title="@string/home_task" />
+    <item
+        android:id="@+id/navigation_chat"
+        android:icon="@drawable/selector_tab_msg"
+        android:title="@string/home_im" />
+<!--    <item-->
+<!--        android:id="@+id/navigation_contact"-->
+<!--        android:icon="@drawable/ic_friend"-->
+<!--        android:title="@string/home_contact" />-->
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/selector_tab_found"
+        android:title="@string/found_tab" />
+    <item
+        android:id="@+id/navigation_user"
+        android:icon="@drawable/selector_tab_my"
+        android:title="@string/person" />
+</menu>

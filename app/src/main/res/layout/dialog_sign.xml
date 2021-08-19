@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <FrameLayout
+            android:layout_width="300dp"
+            android:layout_height="458dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/dialog_jfqd">
+
+        <ImageView
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="160dp"
+                android:src="@drawable/sign_success" />
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="250dp">
+
+            <TextView
+                    android:id="@+id/sign_points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+10"
+                    android:textColor="@color/red"
+                    android:textSize="24sp" />
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jf"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:textColor="@color/red"/>
+        </LinearLayout>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="明天签到有更多积分哦！"
+                android:layout_marginTop="300dp"
+                android:textColor="@color/text_gray"/>
+        <Button
+                android:id="@+id/ok"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="380dp"
+                android:textColor="@color/white"
+                android:text="@string/ok"
+                android:paddingBottom="20dp"
+                android:background="@drawable/sign_btn"/>
+    </FrameLayout>
+    <ImageView
+            android:id="@+id/close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/sign_close"/>
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:minHeight="50dp"
+        android:layout_height="wrap_content">
+    <com.airbnb.lottie.LottieAnimationView
+           android:id="@+id/foot_loading"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="foot_loading.json"
+            app:lottie_loop="true" />
+
+    <LinearLayout
+        android:id="@+id/foot_finsh"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_gravity="bottom"
+        android:visibility="gone"
+        android:layout_height="40dp">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_weight="1"
+            android:layout_marginLeft="30dp"
+            android:background="#DEDEDE"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@android:color/darker_gray"
+            android:text="已展示全部"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_weight="1"
+            android:layout_marginRight="30dp"
+            android:background="#DEDEDE"/>
+    </LinearLayout>
+</LinearLayout>

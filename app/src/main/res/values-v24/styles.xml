@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="windowNoTitle">true</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:windowBackground">@color/white_back</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <!--去掉状态栏-->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+
+        <!-- 允许使用transitions -->
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:launchMode">singleTask</item>
+
+        <item name="android:resizeableActivity">true</item>
+
+<!--        <item name="colorControlNormal">#e1e1e1</item>-->
+<!--        <item name="colorControlActivated">#e1e1e1</item>-->
+<!--        <item name="colorControlHighlight">#e1e1e1</item>-->
+        <item name="android:screenOrientation">portrait</item>
+
+        <!--        <item name="android:background">@color/white</item>-->
+    </style>
+</resources>

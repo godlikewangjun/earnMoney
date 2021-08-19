@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+    <ImageView
+            android:id="@+id/imgView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/div"
+            android:scaleType="centerCrop" />
+    <View
+        android:id="@+id/mark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <ImageView
+        android:id="@+id/iv_del"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_margin="@dimen/ten"
+        android:background="@color/gray"
+        android:src="@drawable/picture_icon_delete"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:autoSizeTextType="uniform"
+        android:text="@string/task_img"
+        android:layout_margin="@dimen/ten"
+        android:textColor="@color/red"/>
+</FrameLayout>
+

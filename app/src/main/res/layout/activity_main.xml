@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View style="@style/div" />
+
+    <LinearLayout
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/home_tab"
+            android:drawableTop="@drawable/selector_tab_task"
+            android:text="@string/home_task" />
+
+       <!-- <androidx.appcompat.widget.AppCompatTextView
+            style="@style/home_tab"
+            android:drawableTop="@drawable/selector_tab_msg"
+            android:text="@string/home_im" />-->
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/home_tab"
+            android:drawableTop="@drawable/selector_tab_found"
+            android:text="@string/found_tab" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/home_tab"
+            android:drawableTop="@drawable/selector_tab_my"
+            android:text="@string/person" />
+    </LinearLayout>
+</LinearLayout>
+
